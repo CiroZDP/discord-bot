@@ -4,10 +4,13 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 
 // Command: progToOpen = spawnObj('C:\\Windows\\notepad.exe');
 
-/*
+/**
  * Idea:
  * Let's make a discord bot that can control my pc.
  * This is kind of fun XD.
+ * 
+ * With the command "abrir notepad" you can
+ * open the notepad.
  */
 
 export var env = {}
@@ -19,13 +22,10 @@ client.on('ready', () => {
 
 client.on('messageCreate', onMessage);
 
-client.login('TOKEN HERE');
+client.login('CLIENT TOKEN HERE');
 
 function main() {
-    const general = client.channels.cache.get('981662959409455159')
+    const general = client.channels.cache.get('CHANNEL TOKEN HERE')
     env.channels = {}
     env.channels.general = general
-//    general.send('Hola! Soy JavhanBOT,\ny sirvo para darle instrucciones ala compu d siro xdd.');
-
-    onMessage("abrir notepad");
 }
